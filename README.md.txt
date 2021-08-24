@@ -30,5 +30,9 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## References
+
+* [C# official documentation](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [Naming Convetion](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

@@ -1,7 +1,7 @@
 ﻿
 namespace CRM
 {
-    partial class FrmContact
+    partial class FrmContactMaster
     {
         /// <summary>
         ///  Required designer variable.
@@ -68,6 +68,7 @@ namespace CRM
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::_226TestApp.Properties.Resources.MathieuRicard;
             this.pictureBox1.Location = new System.Drawing.Point(10, 39);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(112, 111);
@@ -101,6 +102,7 @@ namespace CRM
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(165, 23);
             this.textBox4.TabIndex = 9;
+            this.textBox4.Text = "mathieu.ricard@monk.org";
             // 
             // label4
             // 
@@ -118,6 +120,7 @@ namespace CRM
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(165, 23);
             this.textBox3.TabIndex = 7;
+            this.textBox3.Text = "France";
             // 
             // label3
             // 
@@ -135,6 +138,7 @@ namespace CRM
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(165, 23);
             this.textBox2.TabIndex = 5;
+            this.textBox2.Text = "15-FEV-1946";
             // 
             // label2
             // 
@@ -152,6 +156,7 @@ namespace CRM
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(165, 23);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Mathieu";
             // 
             // label1
             // 
@@ -169,6 +174,7 @@ namespace CRM
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(165, 23);
             this.textBoxName.TabIndex = 1;
+            this.textBoxName.Text = "Ricard";
             // 
             // labelName
             // 
@@ -194,18 +200,18 @@ namespace CRM
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(202, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 15);
+            this.label5.Size = new System.Drawing.Size(138, 15);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Mis à jour le : ";
+            this.label5.Text = "Mis à jour le : 20-06-2021";
             // 
             // labelCreationDate
             // 
             this.labelCreationDate.AutoSize = true;
             this.labelCreationDate.Location = new System.Drawing.Point(10, 13);
             this.labelCreationDate.Name = "labelCreationDate";
-            this.labelCreationDate.Size = new System.Drawing.Size(52, 15);
+            this.labelCreationDate.Size = new System.Drawing.Size(110, 15);
             this.labelCreationDate.TabIndex = 0;
-            this.labelCreationDate.Text = "Créé le : ";
+            this.labelCreationDate.Text = "Créé le : 12-05-2020";
             // 
             // groupBoxActions
             // 
@@ -249,7 +255,7 @@ namespace CRM
             this.buttonModify.Text = "Modifier";
             this.buttonModify.UseVisualStyleBackColor = true;
             // 
-            // FrmContact
+            // FrmContactMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

@@ -11,26 +11,46 @@ Votre client vous confie le développement d'un outil simple de gestion de conta
 
 ### Rôle
 
-Cet outil de CRM, en tout cas dans une première version, ne va pas gérer la notion de rôle, ni de session ni d'authentification. Seule l'aspect métier est demandé.
+Les rôles ainsi que la notion d'authentifcation sont développés par une autre équipe de développement. Seuls les aspects métiers nous intéresserons dans cette phase de projet.
 
-### Fonctionnalités
+### Fonctionnalités à développer
+
+**1ère étape de développement, le contact**
 
 ---
-* Ajouter un contact :
+* Créer et afficher un contact :
     * Les propriétés sont :
-        * Nom : "Riccard"
+        * Nom : "Ricard"
         * Prénom : "Mathieu"
         * Date de naissance : "15-FEB-1946"
         * Nationalité : France
-        * Email : "mathieu.riccard@monk.org"
+        * Email : "mathieu.ricard@monk.org"
+        * Image : Photo de profile (un lien vers le fichier)
+        * Une date de création calculée par le système : [JJ/MMM/YYYY]
+        * Une date de dernière mise à jour calculée par le système : [JJ/MMM/YYYY]
+            * Une mise à jour est soit provquée par :
+                * modification d'un champ (n'importe lequel)
+                * Cas particulier : la suppression d'une image.
+    * Toutes les propriétés sont obligatoires, à l'exception de l'image.
 
 ---
-* Créer des listes d'envoi : 
+
+* Modifier un contact existant :
+    * Hormis l'adresse email (qui est l'identifiant naturel), tous les champs doivent pouvoir être mis à jour.
+
+**2eme étape de développement, les listes de contacts**
+---
+* Créer des listes de contacts : 
     * Afin de pouvoir faire des publipostages et autres campagnes d'information, on veut pouvoir gérer des listes d'emails.
     * On doit être capable de créer de nouvelles listes
-        * Une liste est définie par un nom (unique)
-        * Une date de création (JJ/MMM/YYYY)
-        * Une date de dernière mise à jour (JJ/MMM/YYYY)
+        * Une liste est définie par un nom (unique) : "Manifestation 15 avril 2021"
+        * Un nombre d'abonnés (contacts)
+        * Une date de création calculée par le système : [JJ/MMM/YYYY]
+        * Une date de dernière mise à jour calculée par le système : [JJ/MMM/YYYY]
+            * Une mise à jour est soit provoquée par : 
+                * l'ajout ou, 
+                * la suppression d'un contact.
+            * La mise à jour d'une donnée d'un contact n'est pas comprise.
         * Une liste d'adresse email ([RFC](http://www.faqs.org/rfcs/rfc822.html))
         * Il est possible de créer une liste sans adresse email
 

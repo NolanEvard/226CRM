@@ -10,14 +10,13 @@ using System.Windows.Forms;
 
 namespace CRM
 {
-    public partial class FrmContact : Form
+    public partial class FrmContactMaster : Form
     {
         #region private attributes
         private Contact contact = null;
         #endregion private attributes
 
-
-        public FrmContact()
+        public FrmContactMaster()
         {
             InitializeComponent();
         }
