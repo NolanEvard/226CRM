@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="FrmContact.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Model\CrmBusiness.csproj" />
   </ItemGroup>
 
