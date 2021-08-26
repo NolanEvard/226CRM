@@ -24,7 +24,7 @@ namespace CRM
             _nationality = "France";
             _email = "mathieu.ricard@monk.org";
             _pathToImg = "ricard.png";
-            _contact = new Contact(_name, _firstname, _dateOfBirth, _nationality, _email);
+            _contact = new Contact(_name, _firstname, _dateOfBirth, _nationality, _email, _pathToImg);
         }
 
         [Test]
@@ -93,7 +93,7 @@ namespace CRM
             //given
             //refere to Setup method
             string actualEmail = "";
-            string expectedEmail = "mathieu.riccard@monk.org";
+            string expectedEmail = "mathieu.ricard@monk.org";
 
             //when
             actualEmail = _contact.Email;
@@ -122,11 +122,12 @@ namespace CRM
         {
             //given
             //refere to Setup method
+            Contact contact = new Contact(_name, _firstname, _dateOfBirth, _nationality, _email);
             string actualPathToImg = "";
-            string expectedPathToImg = "";
+            string expectedPathToImg = "/";
 
             //when
-            actualPathToImg = _contact.PathToImg;
+            actualPathToImg = contact.PathToImg;
 
             //then
             Assert.AreEqual(expectedPathToImg, actualPathToImg);
