@@ -29,7 +29,7 @@ namespace CRM
 
         private void CreateContact()
         {
-            contact = new Contact("Ricard", "Mathieu");
+            //contact = new Contact("Ricard", "Mathieu");
         }
 
         private void UpdateGui()

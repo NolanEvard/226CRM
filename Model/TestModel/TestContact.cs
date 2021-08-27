@@ -132,5 +132,23 @@ namespace CRM
             //then
             Assert.AreEqual(expectedPathToImg, actualPathToImg);
         }
+
+        [Test]
+        public void PathToImg_SetValue_Success()
+        {
+            //given
+            //refere to Setup method
+            Contact contact = new Contact(_name, _firstname, _dateOfBirth, _nationality, _email);
+            string pathToImg = "/myImage.png";
+            string actualPathToImg = "";
+            string expectedPathToImg = pathToImg;
+            contact.PathToImg = pathToImg;
+
+            //when
+            actualPathToImg = contact.PathToImg;
+
+            //then
+            Assert.AreEqual(expectedPathToImg, actualPathToImg);
+        }
     }
 }

@@ -71,6 +71,11 @@ namespace CRM
                 //TODO
                 throw new NotImplementedException();
             }
+            set
+            {
+                //TODO
+                throw new NotImplementedException();
+            }
         }
         #endregion public methods
 
