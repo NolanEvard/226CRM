@@ -32,18 +32,18 @@ namespace CRM
             this.groupBoxPicture = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBoxPersonnalData = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxNationality = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxDateOfBirth = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFirstname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
             this.groupBoxDates = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelLastUpdate = new System.Windows.Forms.Label();
             this.labelCreationDate = new System.Windows.Forms.Label();
             this.groupBoxActions = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -77,13 +77,13 @@ namespace CRM
             // 
             // groupBoxPersonnalData
             // 
-            this.groupBoxPersonnalData.Controls.Add(this.textBox4);
+            this.groupBoxPersonnalData.Controls.Add(this.textBoxEmail);
             this.groupBoxPersonnalData.Controls.Add(this.label4);
-            this.groupBoxPersonnalData.Controls.Add(this.textBox3);
+            this.groupBoxPersonnalData.Controls.Add(this.textBoxNationality);
             this.groupBoxPersonnalData.Controls.Add(this.label3);
-            this.groupBoxPersonnalData.Controls.Add(this.textBox2);
+            this.groupBoxPersonnalData.Controls.Add(this.textBoxDateOfBirth);
             this.groupBoxPersonnalData.Controls.Add(this.label2);
-            this.groupBoxPersonnalData.Controls.Add(this.textBox1);
+            this.groupBoxPersonnalData.Controls.Add(this.textBoxFirstname);
             this.groupBoxPersonnalData.Controls.Add(this.label1);
             this.groupBoxPersonnalData.Controls.Add(this.textBoxName);
             this.groupBoxPersonnalData.Controls.Add(this.labelName);
@@ -94,13 +94,13 @@ namespace CRM
             this.groupBoxPersonnalData.TabStop = false;
             this.groupBoxPersonnalData.Text = "Données personnelles";
             // 
-            // textBox4
+            // textBoxEmail
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(106, 137);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 23);
-            this.textBox4.TabIndex = 9;
+            this.textBoxEmail.Enabled = false;
+            this.textBoxEmail.Location = new System.Drawing.Point(106, 137);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(165, 23);
+            this.textBoxEmail.TabIndex = 9;
             // 
             // label4
             // 
@@ -111,13 +111,13 @@ namespace CRM
             this.label4.TabIndex = 8;
             this.label4.Text = "Email";
             // 
-            // textBox3
+            // textBoxNationality
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(106, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 23);
-            this.textBox3.TabIndex = 7;
+            this.textBoxNationality.Enabled = false;
+            this.textBoxNationality.Location = new System.Drawing.Point(106, 111);
+            this.textBoxNationality.Name = "textBoxNationality";
+            this.textBoxNationality.Size = new System.Drawing.Size(165, 23);
+            this.textBoxNationality.TabIndex = 7;
             // 
             // label3
             // 
@@ -128,13 +128,13 @@ namespace CRM
             this.label3.TabIndex = 6;
             this.label3.Text = "Nationalité";
             // 
-            // textBox2
+            // textBoxDateOfBirth
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(106, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 23);
-            this.textBox2.TabIndex = 5;
+            this.textBoxDateOfBirth.Enabled = false;
+            this.textBoxDateOfBirth.Location = new System.Drawing.Point(106, 85);
+            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
+            this.textBoxDateOfBirth.Size = new System.Drawing.Size(165, 23);
+            this.textBoxDateOfBirth.TabIndex = 5;
             // 
             // label2
             // 
@@ -145,13 +145,13 @@ namespace CRM
             this.label2.TabIndex = 4;
             this.label2.Text = "Date de naiss.";
             // 
-            // textBox1
+            // textBoxFirstname
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(106, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 23);
-            this.textBox1.TabIndex = 3;
+            this.textBoxFirstname.Enabled = false;
+            this.textBoxFirstname.Location = new System.Drawing.Point(106, 59);
+            this.textBoxFirstname.Name = "textBoxFirstname";
+            this.textBoxFirstname.Size = new System.Drawing.Size(165, 23);
+            this.textBoxFirstname.TabIndex = 3;
             // 
             // label1
             // 
@@ -181,7 +181,7 @@ namespace CRM
             // 
             // groupBoxDates
             // 
-            this.groupBoxDates.Controls.Add(this.label5);
+            this.groupBoxDates.Controls.Add(this.labelLastUpdate);
             this.groupBoxDates.Controls.Add(this.labelCreationDate);
             this.groupBoxDates.Location = new System.Drawing.Point(33, 259);
             this.groupBoxDates.Name = "groupBoxDates";
@@ -189,14 +189,14 @@ namespace CRM
             this.groupBoxDates.TabIndex = 2;
             this.groupBoxDates.TabStop = false;
             // 
-            // label5
+            // labelLastUpdate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(202, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Mis à jour le : ";
+            this.labelLastUpdate.AutoSize = true;
+            this.labelLastUpdate.Location = new System.Drawing.Point(202, 13);
+            this.labelLastUpdate.Name = "labelLastUpdate";
+            this.labelLastUpdate.Size = new System.Drawing.Size(80, 15);
+            this.labelLastUpdate.TabIndex = 1;
+            this.labelLastUpdate.Text = "Mis à jour le : ";
             // 
             // labelCreationDate
             // 
@@ -280,18 +280,18 @@ namespace CRM
         private System.Windows.Forms.GroupBox groupBoxPicture;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBoxPersonnalData;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxNationality;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDateOfBirth;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxFirstname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.GroupBox groupBoxDates;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelLastUpdate;
         private System.Windows.Forms.Label labelCreationDate;
         private System.Windows.Forms.GroupBox groupBoxActions;
         private System.Windows.Forms.Button button3;

@@ -29,12 +29,12 @@ namespace CRM
 
         private void CreateContact()
         {
-            contact = new Contact("Ricard", "Mathieu");
+
         }
 
         private void UpdateGui()
         {
-            this.textBoxName.Text = contact.Name;
+            
         }
     }
 }
