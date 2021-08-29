@@ -17,7 +17,7 @@ namespace CRM
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmContact());
+            Application.Run(new FrmContactMaster());
         }
     }
 }
