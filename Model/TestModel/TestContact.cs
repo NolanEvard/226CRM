@@ -139,16 +139,65 @@ namespace CRM
             //given
             //refere to Setup method
             Contact contact = new Contact(_name, _firstname, _dateOfBirth, _nationality, _email);
-            string pathToImg = "/myImage.png";
             string actualPathToImg = "";
-            string expectedPathToImg = pathToImg;
-            contact.PathToImg = pathToImg;
+            string expectedPathToImg = "/myNewImage.png";            
 
             //when
-            actualPathToImg = contact.PathToImg;
+            contact.PathToImg = expectedPathToImg;
 
             //then
+            actualPathToImg = contact.PathToImg;
             Assert.AreEqual(expectedPathToImg, actualPathToImg);
+        }
+
+        [Test]
+        public void CreationDate_GetValue_Success()
+        {
+            //given
+            //refere to Setup method
+            DateTime actualCreationDate;
+            DateTime expectedCreationDate = DateTime.Now;
+
+            //when
+            actualCreationDate = _contact.CreationDate;
+
+            //when
+            TimeSpan diffCalculated = actualCreationDate - expectedCreationDate;
+            TimeSpan diffMaxAccepted = new TimeSpan(0, 0, 1);
+            Assert.IsTrue(diffCalculated <= diffMaxAccepted) ;
+        }
+
+        [Test]
+        public void LastUpdate_GetValue_Success()
+        {
+            //given
+            //refere to Setup method
+            DateTime actualLastUpdate;
+            DateTime expectedLastUpdate = DateTime.Now;
+
+            //when
+            actualLastUpdate = _contact.LastUpdate;
+
+            //when
+            TimeSpan diffCalculated = actualLastUpdate - expectedLastUpdate;
+            TimeSpan diffMaxAccepted = new TimeSpan(0, 0, 1);
+            Assert.IsTrue(diffCalculated <= diffMaxAccepted);
+        }
+
+        [Test]
+        public void LastUpdate_UpdateValue_Success()
+        {
+            //given
+            //refere to Setup method
+            DateTime actualLastUpdate;
+            _contact.PathToImg = "/myNewPicture.png";
+            DateTime creationDate = _contact.CreationDate;
+
+            //when
+            actualLastUpdate = _contact.LastUpdate;
+
+            //when
+            Assert.AreNotEqual(creationDate, actualLastUpdate);
         }
     }
 }
