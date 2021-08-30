@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CRM
+namespace CrmBusiness
 {
     /// <summary>
     /// This class is designed to manage a Contact
@@ -28,9 +28,9 @@ namespace CRM
         /// <param name="email">contact's email</param>
         /// <param name="pathToImg">path to the contact's profil image</param>
         #region public methods
-        public Contact (string name, string firstname, DateTime dateOfBirth, string nationality, string email, string pathToImg = "/")
+        public Contact(string name, string firstname, DateTime dateOfBirth, string nationality, string email, string pathToImg = "/")
         {
-            throw new NotImplementedException();
+            //TODO
         }
 
         /// <summary>
@@ -40,8 +40,9 @@ namespace CRM
         {
             get
             {
+                //TODO
                 throw new NotImplementedException();
-            }           
+            }
         }
 
         /// <summary>
@@ -51,6 +52,7 @@ namespace CRM
         {
             get
             {
+                //TODO
                 throw new NotImplementedException();
             }
         }
@@ -62,6 +64,7 @@ namespace CRM
         {
             get
             {
+                //TODO
                 throw new NotImplementedException();
             }
         }
@@ -73,6 +76,7 @@ namespace CRM
         {
             get
             {
+                //TODO
                 throw new NotImplementedException();
             }
         }
@@ -84,6 +88,7 @@ namespace CRM
         {
             get
             {
+                //TODO
                 throw new NotImplementedException();
             }
         }
@@ -97,10 +102,12 @@ namespace CRM
         {
             get
             {
+                //TODO
                 throw new NotImplementedException();
             }
             set
             {
+                //TODO
                 throw new NotImplementedException();
             }
         }
@@ -112,6 +119,7 @@ namespace CRM
         {
             get
             {
+                //TODO
                 throw new NotImplementedException();
             }
         }
@@ -124,12 +132,18 @@ namespace CRM
         {
             get
             {
+                //TODO
                 throw new NotImplementedException();
             }
         }
         #endregion public methods
 
         #region private methods
+        private void UpdateLastUpdate()
+        {
+            //TODO
+            throw new NotImplementedException();
+        }
         #endregion private methods
     }
 }

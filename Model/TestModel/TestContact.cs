@@ -1,9 +1,9 @@
 using NUnit.Framework;
 using System;
 
-namespace CRM
+namespace CrmBusiness
 {
-    public class Tests
+    public class TestsContact
     {
         #region private attributes
         private Contact _contact = null;
