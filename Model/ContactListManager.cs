@@ -21,7 +21,13 @@ namespace CrmBusiness
         /// <param name="contacts">A list of contacts to insert in the manager</param>
         public ContactListManager(List<Contact> contacts = null)
         {
-            //TODO
+            if(contacts != null)
+            {
+                _contacts = contacts;
+            }
+
+            _creationDate = DateTime.Now;
+            _lastUpdate = _creationDate;
         }
 
         /// <summary>
@@ -31,8 +37,7 @@ namespace CrmBusiness
         {
             get
             {
-                //TODO
-                throw new NotImplementedException();
+                return _contacts;
             }
         }
 
@@ -44,8 +49,25 @@ namespace CrmBusiness
         /// <param name="allowDuplicate">Flase = duplicate is not allowed (will be removed), True = duplicate is possible</param>
         public void Add(List<Contact> contactsToAdd, Boolean allowDuplicate=false)
         {
-            //TODO
-            throw new NotImplementedException();
+            if (contactsToAdd != null)
+            {
+                if (!(allowDuplicate))
+                {
+                    foreach (Contact contact in contactsToAdd)
+                    {
+                        if (!(Exist(contact)))
+                        {
+                            contactsToAdd.Add(contact);
+                            UpdateLastUpdate();
+                        }
+                    }
+                }
+                else
+                {
+                    _contacts.AddRange(contactsToAdd);
+                    UpdateLastUpdate();
+                }
+            }
         }
 
         /// <summary>
@@ -54,16 +76,38 @@ namespace CrmBusiness
         /// <param name="contacts"></param>
         public void Remove(List<Contact> contactsToRemove)
         {
-            //TODO
-            throw new NotImplementedException();
+            foreach(Contact contact in contactsToRemove)
+            {
+                if (Exist(contact))
+                {
+                    _contacts.Remove(contact);
+                    UpdateLastUpdate();
+                }
+            }
         }
         #endregion public methods
 
         #region private methods
         private bool Exist(Contact contactToFind)
         {
-            //TODO
-            throw new NotImplementedException();
+            bool result = false;
+            if(_contacts == null)
+            {
+                return result;
+            }
+            foreach (Contact existingContact in _contacts)
+            {
+                if (existingContact.Email == contactToFind.Email)
+                {
+                    result = true;
+                }
+            }
+            return result;
+        }
+
+        private void UpdateLastUpdate()
+        {
+            _lastUpdate = DateTime.Now;
         }
         #endregion private methods
 

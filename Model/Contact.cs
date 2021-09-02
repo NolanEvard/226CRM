@@ -30,7 +30,19 @@ namespace CrmBusiness
         #region public methods
         public Contact(string name, string firstname, DateTime dateOfBirth, string nationality, string email, string pathToImg = "/")
         {
-            //TODO
+            //Giving private attributes constructor parmeters value's
+            _name = name;
+            _firstname = firstname;
+            _dateOfBirth = dateOfBirth;
+            _nationality = nationality;
+            _email = email;
+            _pathToImg = pathToImg;
+
+            //Update creation date
+            _creationDate = DateTime.Now;
+
+            //LastUpdate and creationDate are equal at the beginning
+            _lastUpdate = _creationDate;
         }
 
         /// <summary>
@@ -40,8 +52,7 @@ namespace CrmBusiness
         {
             get
             {
-                //TODO
-                throw new NotImplementedException();
+                return _name;
             }
         }
 
@@ -52,8 +63,7 @@ namespace CrmBusiness
         {
             get
             {
-                //TODO
-                throw new NotImplementedException();
+                return _firstname;
             }
         }
 
@@ -64,8 +74,7 @@ namespace CrmBusiness
         {
             get
             {
-                //TODO
-                throw new NotImplementedException();
+                return _dateOfBirth;
             }
         }
 
@@ -76,8 +85,7 @@ namespace CrmBusiness
         {
             get
             {
-                //TODO
-                throw new NotImplementedException();
+                return _nationality;
             }
         }
 
@@ -88,8 +96,7 @@ namespace CrmBusiness
         {
             get
             {
-                //TODO
-                throw new NotImplementedException();
+                return _email;
             }
         }
 
@@ -102,13 +109,12 @@ namespace CrmBusiness
         {
             get
             {
-                //TODO
-                throw new NotImplementedException();
+                return _pathToImg;
             }
             set
             {
-                //TODO
-                throw new NotImplementedException();
+                _pathToImg = value;
+                UpdateLastUpdate();
             }
         }
 
@@ -119,8 +125,7 @@ namespace CrmBusiness
         {
             get
             {
-                //TODO
-                throw new NotImplementedException();
+                return _creationDate;
             }
         }
 
@@ -132,8 +137,7 @@ namespace CrmBusiness
         {
             get
             {
-                //TODO
-                throw new NotImplementedException();
+                return _lastUpdate;
             }
         }
         #endregion public methods
@@ -141,8 +145,7 @@ namespace CrmBusiness
         #region private methods
         private void UpdateLastUpdate()
         {
-            //TODO
-            throw new NotImplementedException();
+            _lastUpdate = DateTime.Now;
         }
         #endregion private methods
     }
