@@ -49,25 +49,38 @@ namespace CrmBusiness
         /// <param name="allowDuplicate">Flase = duplicate is not allowed (will be removed), True = duplicate is possible</param>
         public void Add(List<Contact> contactsToAdd, Boolean allowDuplicate=false)
         {
-            if (contactsToAdd != null)
+            if(_contacts == null)
             {
-                if (!(allowDuplicate))
-                {
-                    foreach (Contact contact in contactsToAdd)
-                    {
-                        if (!(Exist(contact)))
-                        {
-                            contactsToAdd.Add(contact);
-                            UpdateLastUpdate();
-                        }
-                    }
-                }
-                else
+                _contacts = new List<Contact>();
+                if (contactsToAdd != null)
                 {
                     _contacts.AddRange(contactsToAdd);
                     UpdateLastUpdate();
                 }
             }
+            else
+            {
+                if (contactsToAdd != null)
+                {
+                    if (!(allowDuplicate))
+                    {
+                        foreach (Contact contact in contactsToAdd)
+                        {
+                            if (!(Exist(contact)))
+                            {
+                                contactsToAdd.Add(contact);
+                                UpdateLastUpdate();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        _contacts.AddRange(contactsToAdd);
+                        UpdateLastUpdate();
+                    }
+                }
+            }
+            
         }
 
         /// <summary>
