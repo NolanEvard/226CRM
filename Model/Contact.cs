@@ -35,7 +35,14 @@ namespace CrmBusiness
             _firstname = firstname;
             _dateOfBirth = dateOfBirth;
             _nationality = nationality;
-            _email = email;
+            if(email.IndexOf("@") == -1)
+            {
+                throw new InvalideEmailValueException();
+            }
+            else
+            {
+                _email = email;
+            }
             _pathToImg = pathToImg;
 
             //Update creation date

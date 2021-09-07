@@ -21,10 +21,7 @@ namespace CrmBusiness
         /// <param name="contacts">A list of contacts to insert in the manager</param>
         public ContactListManager(List<Contact> contacts = null)
         {
-            if(contacts != null)
-            {
                 _contacts = contacts;
-            }
 
             _creationDate = DateTime.Now;
             _lastUpdate = _creationDate;
@@ -89,12 +86,19 @@ namespace CrmBusiness
         /// <param name="contacts"></param>
         public void Remove(List<Contact> contactsToRemove)
         {
-            foreach(Contact contact in contactsToRemove)
+            if (_contacts == null)
             {
-                if (Exist(contact))
+                throw new RemoveContactException();
+            }
+            else
+            {
+                foreach (Contact contact in contactsToRemove)
                 {
-                    _contacts.Remove(contact);
-                    UpdateLastUpdate();
+                    if (Exist(contact))
+                    {
+                        _contacts.Remove(contact);
+                        UpdateLastUpdate();
+                    }
                 }
             }
         }
