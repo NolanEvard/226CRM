@@ -147,3 +147,7 @@ namespace CrmBusiness
         #endregion private methods
     }
 }
+
+public class ContactException : Exception { }
+
+public class InvalideEmailValueException : ContactException { }

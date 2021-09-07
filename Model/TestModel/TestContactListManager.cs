@@ -206,5 +206,16 @@ namespace CrmBusiness
                 Assert.AreEqual(expectedContacts[i].Email, actualContacts[i].Email);
             }
         }
+
+        [Test]
+        public void Remove_EmptyContactsList_ThrowRemoveContactException()
+        {
+            //given
+            //refere to Setup method
+            _contactListManager = new ContactListManager();
+
+            //when + then
+            Assert.Throws<RemoveContactException>(delegate { _contactListManager.Remove(_listOfContactsInitial); });
+        }
     }
 }

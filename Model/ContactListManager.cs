@@ -69,3 +69,7 @@ namespace CrmBusiness
 
     }
 }
+
+public class ContactListManager : Exception { }
+
+public class RemoveContactException : ContactListManager { }
