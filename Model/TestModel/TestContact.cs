@@ -28,6 +28,22 @@ namespace CrmBusiness
         }
 
         [Test]
+        public void Contact_EmailWrongValue_ThrowInvalideEmailValueException()
+        {
+            //given
+            //refere to Setup method
+            string expectedEmailAddresss = "mathieu.ricard_monk.org";
+
+            //when + then
+            Assert.Throws<InvalideEmailValueException>(delegate
+            {
+                new Contact(_name, _firstname, _dateOfBirth, _nationality, expectedEmailAddresss);
+            }
+            );
+        }
+
+
+        [Test]
         public void Name_GetValue_Success()
         {
             //given
